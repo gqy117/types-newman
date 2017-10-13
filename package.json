@@ -1,0 +1,15 @@
+{
+  "name": "@types/newman",
+  "version": "1.0.0",
+  "description": "Typescript Typings for newman.",
+  "typings": "index.d.ts",
+  "devDependencies": {
+    "newman": "^3.8.3"
+  },
+  "scripts": {
+    "start": "",
+    "test": "tsc && node newman-tests.js"
+  },
+  "author": "leo.li",
+  "license": "MIT"
+}
