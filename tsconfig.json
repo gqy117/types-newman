@@ -2,9 +2,14 @@
     "compilerOptions": {
         "module": "commonjs",
         "noImplicitAny": true,
-        "lib": ["es5", "es6", "dom"],
+        "lib": ["es6"],
+        "baseUrl": "./",
         "typeRoots": [
             "./node_modules/@types"
         ]
-    }
+    },
+    "files": [
+        "./newman/index.d.ts",
+        "newman-tests.ts"
+    ]
 }
