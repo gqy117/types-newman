@@ -1,6 +1,6 @@
 {
   "name": "types-newman",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Typescript Typings for newman.",
   "typings": "index.d.ts",
   "scripts": {
