@@ -1,7 +1,14 @@
+import * as Promise from "Bluebird";
+
 declare var newman: Newman.Newman;
+declare var newmanAsync: Newman.NewmanAsync;
 
 declare module 'newman' {
     export = newman;
+}
+
+declare module 'newmanAsync' {
+    export = newmanAsync;
 }
 
 declare namespace Newman {
@@ -43,5 +50,10 @@ declare namespace Newman {
     export interface Newman {
         run(options: Option, callback?: () => void): EventEmitter;
         version(): string;
+    }
+
+    export interface NewmanAsync {
+        runAsync(options: Option, callback?: () => void): Promise<any>;
+        versionAsync(): Promise<any>;
     }
 }
