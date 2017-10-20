@@ -1,9 +1,9 @@
-import Newman = require("newman");
+import newman = require("newman");
 import * as Promise from "bluebird";
 
-const option: Newman.Option = {};
+const option: newman.Option = {};
 
-Newman.run(option);
+newman.run(option);
 
-const newmanAsync: Newman = Promise.promisifyAll(Newman) as Newman;
+const newmanAsync: newman.NewmanAsync = Promise.promisifyAll(newman) as newman.NewmanAsync;
 newmanAsync.runAsync(option);
