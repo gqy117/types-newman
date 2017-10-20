@@ -1,26 +1,21 @@
-import * as Promise from "Bluebird";
-
 declare var newman: Newman.Newman;
-declare var newmanAsync: Newman.NewmanAsync;
 
 declare module 'newman' {
-    export = newman;
-}
-
-declare module 'newmanAsync' {
-    export = newmanAsync;
+    import * as Promise from "Bluebird";  
+    
+    export default newman;
 }
 
 declare namespace Newman {
-    export interface EventEmitter {
+    interface EventEmitter {
 
     }
 
-    export interface Collection {
+    interface Collection {
 
     }
 
-    export interface Environment {
+    interface Environment {
 
     }
 
@@ -28,15 +23,15 @@ declare namespace Newman {
 
     }
 
-    export interface IterationData {
+    interface IterationData {
 
     }
 
-    export interface Reporter {
+    interface Reporter {
 
     }
 
-    export interface Option {
+    interface Option {
         collection?: Collection | string,
         environment?: Environment | string,
         globals?: Global | string,
@@ -47,12 +42,12 @@ declare namespace Newman {
         exportCollection?: string
     }
 
-    export interface Newman {
+    interface Newman {
         run(options: Option, callback?: () => void): EventEmitter;
         version(): string;
     }
 
-    export interface NewmanAsync {
+    interface NewmanAsync {
         runAsync(options: Option, callback?: () => void): Promise<any>;
         versionAsync(): Promise<any>;
     }
