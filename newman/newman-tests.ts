@@ -1,4 +1,4 @@
-import newman = require("newman");
+import * as newman from "index";
 import * as Promise from "bluebird";
 
 const option: newman.Option = {};
