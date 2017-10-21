@@ -35,7 +35,7 @@ export interface Option {
         exportCollection ? : string
 }
 
-declare class NewmanAsync {
+export declare class NewmanAsync {
     runAsync(options: Option, callback ? : () => void): Bluebird<any>;
     versionAsync(): Bluebird<any>;
 }
